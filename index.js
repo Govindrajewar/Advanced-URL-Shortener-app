@@ -15,6 +15,12 @@ connectDB();
 // Routes
 app.use("/api", urlRoutes);
 
+app.get("/", (req, res) => {
+  res.json({
+    message: "URL Shortener App is live!",
+  });
+});
+
 // Start Server
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
